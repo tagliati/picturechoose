@@ -6,11 +6,13 @@
   "author": "tagliati",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "bourbon-neat": "~1.7.4",
     "express": "^4.13.4",
     "express-handlebars": "^3.0.0",
     "gulp": "^3.9.1",
     "handlebars": "^4.0.5",
+    "multer": "^1.1.0",
     "node-neat": "~1.7.2",
     "node-sass": "^3.4.2",
     "nodejs": "0.0.0",
