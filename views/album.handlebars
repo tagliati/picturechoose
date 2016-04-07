@@ -1,0 +1,8 @@
+<section class="photos">
+{{#each photos }}
+<div class="box">
+	<input type="checkbox" id="{{this.image}}"/>
+	<label for="image-{{this.image}}"><img src="static/images/{{this.image}}"></label>
+</div>
+{{/each}}
+</section>

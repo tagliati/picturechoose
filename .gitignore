@@ -1,0 +1,9 @@
+*.swp
+*.swo
+*.log
+public/
+static/
+config.js
+node_modules/
+*.db
+*.log
