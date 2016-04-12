@@ -28,6 +28,10 @@ app.get('/upload',function(req,res){
 	res.render("upload");
 });
 
+app.post('/album/:slug',function(req, res){
+	console.log(req.body);	
+});
+
 app.post('/api/photo',function(req,res){
 	upload(req,res,function(err){
 		console.log(req.body);
