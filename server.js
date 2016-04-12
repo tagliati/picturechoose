@@ -46,12 +46,12 @@ app.get('/', function (req, res) {
 app.get('/album/:slug', function(req,res) {
     var slug = req.params.slug;
     db.all("SELECT * FROM photos WHERE slug = '"+slug+"';",function(err, row) {
-        res.render("album",{photos: row});
+        res.render("album",{photos: row,slug: slug});
     })
 });
 
 
 app.listen(3300, function () {
-	console.log('Example app listening on port 3300!');
+	console.log('Listening on port 3300!');
 });
 

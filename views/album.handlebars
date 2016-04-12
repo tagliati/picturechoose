@@ -1,8 +1,12 @@
 <section class="photos">
+<form>
+	<input type="hidden" name="slug" value="{{ this.slug }}">
 {{#each photos }}
-<div class="box">
-	<input type="checkbox" id="{{this.image}}"/>
-	<label for="image-{{this.image}}"><img src="static/images/{{this.image}}"></label>
-</div>
+	<div class="box">
+		<input type="checkbox" id="{{this.image}}"/>
+		<label for="image-{{this.image}}"><img src="static/images/{{this.image}}"></label>
+	</div>
+	<button type="submit">save</button>
+</form>
 {{/each}}
 </section>
