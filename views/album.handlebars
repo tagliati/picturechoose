@@ -1,12 +1,13 @@
 <section class="photos">
-<form>
+<form method="POST">
 	<input type="hidden" name="slug" value="{{ this.slug }}">
-{{#each photos }}
-	<div class="box">
-		<input type="checkbox" id="{{this.image}}"/>
-		<label for="image-{{this.image}}"><img src="static/images/{{this.image}}"></label>
-	</div>
+	{{#each photos }}
+		<label class="box" style="background-image:url( {{ this.image }}); background-repeat: no-repeat; display: inline-block;">
+			<div class="box" style="background-image: url(data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==);background-repeat: repeat; height: 600px; width: 600px;">
+				<input type="checkbox" id="{{this.image}}"/>
+			</div>
+		</label>
+	{{/each}}
 	<button type="submit">save</button>
 </form>
-{{/each}}
 </section>

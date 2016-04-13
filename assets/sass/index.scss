@@ -9,7 +9,9 @@ section.photos {
     @include outer-container;
     div.box {
         font-size: 0.78em;
-        @include span-columns(3);
+		height: 600px;
+		margin-bottom: 10px;
+        @include span-columns(7);
         @include omega(4n);
     }
 }

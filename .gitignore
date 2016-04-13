@@ -7,3 +7,4 @@ config.js
 node_modules/
 *.db
 *.log
+uploads/*

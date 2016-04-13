@@ -1,5 +1,5 @@
 var config = {};
 
-config.db = "beer.db";
+config.db = "photos.db";
 
 module.exports = config;
