@@ -1,4 +1,5 @@
 var express = require('express');
+var fs = require('fs');
 var bodyParser = require('body-parser');
 var multer = require('multer');
 var exphbs = require('express-handlebars');
@@ -36,8 +37,16 @@ app.post('/api/photo',function(req,res){
 	upload(req,res,function(err){
 		console.log(req.body);
 		console.log(req.files);
+		var data = req.files;
 		if(err) {
 			return res.end("Error uploading file");
+		}
+		
+		var stmt = db.prepare("INSERT INTO photos VALUES (?,?)");
+		for (var i in req.files) {
+			console.log("save picture",data[i].originalname);
+			//save images at database as base64?
+			stmt.run("axh3Ph1",fs.readFileSync(data[i].path).toString('base64'));
 		}
 		res.end("Uploaded with success");
 	});

@@ -2,7 +2,7 @@
 <form method="POST">
 	<input type="hidden" name="slug" value="{{ this.slug }}">
 	{{#each photos }}
-		<label class="box" style="background-image:url( {{ this.image }}); background-repeat: no-repeat; display: inline-block;">
+		<label class="box" style="background-image:url( data:image/jpg;base64,{{ this.image }}); background-repeat: no-repeat; display: inline-block;">
 			<div class="box" style="background-image: url(data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==);background-repeat: repeat; height: 600px; width: 600px;">
 				<input type="checkbox" id="{{this.image}}"/>
 			</div>
